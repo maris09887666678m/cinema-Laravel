@@ -1,21 +1,18 @@
-<div
-    class="relative max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+<div class="card" style="width: 18rem;">
     <a href="{{ route('movies.show', $movie->id) }}">
-        <img class="rounded-t-lg" src="{{ $movie->poster_url }}" alt="{{ $movie->title }}" />
+        <img class="card-img-top" src="{{ $movie->poster_url }}" alt="{{ $movie->title }}" />
     </a>
-    <div class="p-5">
+    <div class="card-body">
         <a href="{{ route('movies.show', $movie->id) }}">
-            <h5 class="h-10 mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 class="card-title text-dark" style="font-size: 1.25rem; font-weight: bold;">
                 {{ mb_strimwidth($movie->title, 0, 20, '...') }}
             </h5>
         </a>
-
-        <p class="h-10 mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <p class="card-text text-muted" style="font-size: 1rem;">
             {{ mb_strimwidth($movie->description, 0, 50, '...') }}
         </p>
     </div>
-
-    <div class="flex flex-wrap m-3">
+    <div class="card-footer bg-transparent border-top-0">
         <x-movie-info :movie="$movie" />
     </div>
 </div>
