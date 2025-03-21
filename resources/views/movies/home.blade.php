@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-    <section id="filter" class="w-full p-6 max-w-7xl mx-auto lg:p-8">
-        <div class="flex flex-col lg:flex-row justify-center">
-            <div class="w-full lg:w-1/2 lg:p-2 mb-4 lg:mb-0">
+    <section id="filter" class="w-100 p-6">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0">
                 <x-sort />
             </div>
-            <div class="w-full lg:w-1/2 lg:pl-2">
+            <div class="col-12 col-lg-6 d-flex justify-content-end pe-3">
                 <x-search />
             </div>
         </div>
     </section>
 
-    <section id="movie-list" class="p-6 mx-auto max-w-7xl lg:p-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <section id="movie-list" class="p-6 mx-auto">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-6">
             @foreach ($movies as $movie)
                 <x-movie-card :movie="$movie" />
             @endforeach
@@ -24,3 +24,4 @@
         </div>
     </section>
 @endsection
+
