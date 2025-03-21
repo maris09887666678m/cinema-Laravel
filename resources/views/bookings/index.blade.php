@@ -7,10 +7,14 @@
         </h1>
 
         @foreach ($bookings as $booking)
-            <x-booking-card :booking="$booking" :currentDate="$currentDate" :currentTime="$currentTime" />
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <x-booking-card :booking="$booking" :currentDate="$currentDate" :currentTime="$currentTime" />
+                </div>
+            </div>
         @endforeach
 
-        <div class="my-6">
+        <div class="my-6 d-flex justify-content-center">
             {{ $bookings->links() }}
         </div>
     </section>

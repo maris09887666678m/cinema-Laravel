@@ -18,12 +18,12 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               @auth
                 <li>
-                  <a class="dropdown-item" href="{{ route('profile') }}" style="color: white;">
+                  <a class="dropdown-item" href="{{ route('profile') }}" >
                     Profile
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{{ route('bookings.index') }}" style="color: white;">
+                  <a class="dropdown-item" href="{{ route('bookings.index') }}">
                     Bookings
                   </a>
                 </li>
